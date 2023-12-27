@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #personal apps
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -87,6 +90,8 @@ DATABASES = {
         'PASSWORD': os.getenv('PASSWORD')
     }
 }
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 
 # Password validation
