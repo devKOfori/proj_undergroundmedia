@@ -8,7 +8,7 @@ from django.conf import settings
 class CustomUser(AbstractUser):
     username = None
     email = models.EmailField('Email', max_length=255, unique=True)
-    date_of_birth = models.DateField('Date of Birth', blank=True)
+    date_of_birth = models.DateField('Date of Birth', blank=True, null=True)
     phone_number = models.CharField('Phone Number', max_length=255, blank=True)
 
     USERNAME_FIELD = 'email'
